@@ -46,3 +46,8 @@ def delete_contact(request, pk):
 
     return render(request, "contacts/delete_contact.html",
                   {"contact": contact})
+
+#To do make this render notes
+# def contact_detail(request, pk):
+#   contact = get_object_or_404(Contact, pk=pk)
+#   notes = Note.objects.filter(contact=contact)
