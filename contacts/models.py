@@ -1,7 +1,6 @@
 from django.db import models
 from django.core.validators import RegexValidator
 from localflavor.us.models import USStateField, USZipCodeField
-from django.db import models 
 from django.db.models import Model 
 
 
@@ -23,6 +22,10 @@ class Contact(models.Model):
     zip_code = USZipCodeField(null=True, blank=True)
     birthday = models.DateField(null=True, blank=True)
     newnote = models.DateField(auto_now_add=True, null=True, blank=True)
+
+
+    def __str__(self):
+        return self.name
 
 class Note(models.Model):
     contact = models.ForeignKey(Contact, on_delete=models.CASCADE)
