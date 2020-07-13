@@ -1,11 +1,12 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
 
-<div class ="notes">
-    {% for note in notes %}
-    {{note.text}}
-
-    {% endfor %}
-</div>  
-
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
 {% endblock %}
+
+
 

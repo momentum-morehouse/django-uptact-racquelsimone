@@ -31,9 +31,13 @@ urlpatterns = [
     path('contacts/<int:pk>/',
           contacts_views.view_contact,
           name='view_contact'),
-    path('contacts/<int:pk>/notes',
-          contacts_views.list_notes,
-          name='list_notes'),
+    # path('contacts/<int:pk>/notes',
+    #       contacts_views.list_notes,
+    #       name='list_notes'),
+    path('contacts/<int:pk>/notes/',
+         contacts_views.post_note,
+         name='notes'),
+   
     
   
 ]

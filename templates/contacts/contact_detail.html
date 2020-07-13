@@ -38,13 +38,23 @@
 
 </div>
 
-<div class ="notes">
+<!-- <div class ="notes">
+  <div>
+    {% for note in notes %}
+
+    {{note.note}}
+    {% endfor %} -->
+
+
+     <div class ="notes">
     {% for note in notes %}
     {{note.text}}
 
     {% endfor %}
+</div>  
+</div>  
+{% endblock %}
 </div>    
 
 
 
-{% endblock %}
